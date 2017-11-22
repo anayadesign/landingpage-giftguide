@@ -1,0 +1,263 @@
+@import "variables";
+.tpl-cbs {
+  float: none !important;
+}
+.holidayGiftGuide {
+  max-width: 1008px;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  color: $color-black;
+  box-sizing: border-box;
+}
+.holidayGiftGuide * {
+  box-sizing: border-box;
+}
+.holidayGiftGuide:after {
+  clear: both;
+  display: table;
+  content: '';
+}
+.holiday-banner {
+  margin: 0 auto $flex-gutter;
+  padding: 2em 0 1.5em;
+  text-align: center;
+  background-image: url('//cache1.artprintimages.com/images/holiday/2017/giftguide/mobile/gg_header_1x.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $color-holidayred;
+}
+@media screen and (min-width: $breakpoint) {
+  .holiday-banner {
+    padding: 1.25em 0 1em;
+  }
+}
+.holiday-banner h1 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 2em;
+  color: $color-white;
+  @include heading-treatment;
+}
+@media screen and (min-width: 375px) {
+  .holiday-banner h1 {
+    font-size: 3em;
+  }
+}
+@media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+  .holiday-banner {
+    background-image: url('//cache1.artprintimages.com/images/holiday/2017/giftguide/mobile/gg_header_2x.jpg');
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  .holiday-banner {
+    background-image: url('//cache1.artprintimages.com/images/holiday/2017/giftguide/gg_header.jpg');
+  }
+}
+// HEADINGS
+.heading-holidayGuide {
+  margin: 0;
+  padding: 0;
+  @include heading-treatment;
+}
+.heading-holidayTheme {
+  margin: .375em 0 0;
+  padding: 0;
+  font-family: $font-stack-brand;
+  font-weight: 300;
+  font-size: 2em;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  color: $color-black;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+@media screen and (min-width: 375px) {
+  .heading-holidayTheme {
+    font-size: 2.25em;
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  .heading-holidayTheme {
+    margin: .125em 0 0;
+  }
+}
+@media screen and (min-width: $breakpoint2) {
+  .heading-holidayTheme {
+    margin: .375em 0 0;
+  }
+}
+.heading-holidayTheme-featured {
+  margin-top: .125em;
+  font-size: 2em;
+}
+.heading-holidayTheme-featured-title {
+    display: block;
+    color: $color-white;
+    font-family: $font-stack-text;
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.heading-holidayTheme-featured-subject {
+    display: block;
+    color: $color-white;
+}
+@media screen and (min-width: $breakpoint) {
+  .heading-holidayTheme-featured-subject {
+    font-size: .75em
+  }
+}
+@media screen and (min-width: 740px) {
+  .heading-holidayTheme-featured-subject {
+    font-size: 1em
+  }
+}
+
+.theme-featured-callout {
+    position: absolute;
+    bottom: .5em;
+    width: 100%;
+    font-family: $font-stack-brand;
+    font-weight: 300;
+    color:  $color-white;
+    font-size: 1.75em;
+    margin: 0;
+    line-height: 1;
+    letter-spacing: 1px;
+}
+//Theme list
+.theme-list {
+  text-align: center;
+  padding: 2em 0 3em;
+}
+.theme-list .heading-holidayGuide {
+  font-size: 2.5em;
+}
+
+.theme-list ul {
+  display: flex;
+  flex-flow: row wrap;
+  width: 90%;
+  margin: 0 auto;
+}
+.theme-list ul li {
+  width: 50%;
+}
+.theme-list ul li a {
+  display: inline-block;
+  padding: .5em 0;
+  color: $color-holidayred;
+  text-decoration: underline;
+  font-size: 1.125em;
+  font-weight: bold;
+}
+//Grid Blocks
+.theme {
+  @include flex-treatment;
+  text-align: center;
+}
+@media screen and (min-width: $breakpoint) {
+  .theme {
+    max-width: none;
+  }
+}
+.theme img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.theme a {
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+.theme .theme-featured-cta-image {
+  position: absolute;
+  bottom: 4em;
+  width: 33%;
+  right: 1em;
+}
+.theme .theme-featured-cta {
+  position:absolute;
+  right: 1em;
+  bottom: 3em;
+  width: 135px;
+  height: 135px;
+  padding-top: 2.75em;
+  border-radius: 50%;
+  background-color: $color-white;
+  font-family: $font-stack-text;
+  color: $color-holidayred;
+  line-height: 1;
+}
+.theme .theme-featured-cta .theme-featured-cta-price {
+  font-size: 2em;
+}
+.theme .theme-featured-cta .theme-featured-cta-bonus {
+  text-transform: uppercase;
+  font-size: .9em;
+}
+.copy-block {
+  background-color: $color-holidaygold;
+  padding: 3em 3em 3em 2em;
+  @include flex-treatment;
+}
+.copy-block-outro {
+  padding: 4em 3em 3em 2em;
+}
+@media screen and (min-width: 1000px) {
+  .copy-block-outro {
+    background-image: url('//cache1.artprintimages.com/images/holiday/2017/giftguide/gg_ornaments.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+}
+.copy-block .heading-holidayGuide {
+  margin-bottom: .5em;
+  font-size: 3em;
+  font-weight: 400;
+  line-height: 1;
+  color: $color-white;
+}
+@media screen and (min-width: $breakpoint) {
+  .copy-block .heading-holidayGuide {
+    margin-bottom: .25em;
+  }
+}
+.copy-block p {
+  margin: 0 0 0;
+  font-family: $font-stack-text;
+  font-size: 1.125em;
+  line-height: 1.4;
+  color: $color-white;
+  letter-spacing: 1px;
+}
+@media screen and (min-width: $breakpoint) {
+  .copy-block p {
+    font-size: 1em;
+  }
+}
+.promo-module {
+  display: none;
+}
+@media screen and (min-width: $breakpoint) {
+  .promo-module {
+    display: block;
+    @include flex-treatment;
+    background-color: $color-offwhite;
+    background-image: url('//cache1.artprintimages.com/images/holiday/2017/giftguide/artmeansmore.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@import "flexbox";

@@ -1,0 +1,112 @@
+//Flexbox Behavior
+@media screen and (min-width: $breakpoint) {
+  .col {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  .theme-list {
+    display: none;
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  .theme-featured {
+    @include calcFlexGutter(40%);
+    order: 1;
+  }
+  .theme-enthusiast {
+    @include calcFlexGutter(60%);
+    order: 2;
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  .theme-forHim {
+    @include calcFlexGutter(50%);
+    order: 3;
+  }
+  .theme-forHer {
+    @include calcFlexGutter(50%);
+    order: 4;
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  .copy-block-intro {
+    width: 100%;
+    order: 5;
+  }
+}
+@media screen and (min-width: $breakpoint2) {
+  .copy-block-intro {
+    @include calcFlexGutter(70%);
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  .promo-module {
+    @include calcFlexGutter(40%);
+    order: 6;
+  }
+}
+@media screen and (min-width: $breakpoint2) {
+  .promo-module {
+    @include calcFlexGutter(30%);
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  .theme-photostoart {
+    @include calcFlexGutter(60%);
+    order: 7;
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  .theme-nature {
+    @include calcFlexGutter(50%);
+    order: 8;
+  }
+}
+@media screen and (min-width: $breakpoint2) {
+  .theme-nature {
+    @include calcFlexGutter(40%);
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  .theme-globetrotter {
+    @include calcFlexGutter(50%);
+    order: 9;
+  }
+}
+@media screen and (min-width: $breakpoint2) {
+  .theme-globetrotter {
+    @include calcFlexGutter(35%);
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  .copy-block-outro {
+    width: 100%;
+    order: 10;
+  }
+}
+@media screen and (min-width: $breakpoint2) {
+  .copy-block-outro {
+    @include calcFlexGutter(65%);
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  .theme-animal {
+    @include calcFlexGutter(60%);
+    order: 11;
+  }
+  .theme-trendsetter {
+    @include calcFlexGutter(40%);
+    order: 12;
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  .theme-gourmet {
+    @include calcFlexGutter(60%);
+    order: 14;
+  }
+  .theme-zen {
+    @include calcFlexGutter(40%);
+    order: 13;
+  }
+}

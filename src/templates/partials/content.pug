@@ -1,0 +1,102 @@
+- var themes = [{'title':'Art Enthusiast','link': '/gallery/id--b30761/art-enthusiast-posters.htm', 'id': 'gg-mobilelist-enthusiast'}, {'title': 'Photos to Art','link': '/photostoart', 'id': 'gg-mobilelist-p2a'},{'title':'Gifts for Her','link': '/gallery/id--b30764/gifts-for-her-posters.htm', 'id': 'gg-mobilelist-giftsforher'}, {'title':'Nature Lover','link': '/gallery/id--b30759/nature-lover-posters.htm', 'id': 'gg-mobilelist-naturelover'}, {'title':'Gifts for Him','link': '/gallery/id--b30763/gifts-for-him-posters.htm', 'id': 'gg-mobilelist-giftsforhim'}, {'title':'Globetrotter','link': '/gallery/id--b30755/globetrotter-posters.htm', 'id': 'gg-mobilelist-globetrotter'}, {'title':'Animal Lover','link': '/gallery/id--b30762/animal-lover-posters.htm', 'id': 'gg-mobilelist-animallover'}, {'title':'Gourmet','link': '/gallery/id--b30756/gourmet-posters.htm', 'id': 'gg-mobilelist-gourmet'}, {'title':'Trendsetter','link': '/gallery/id--b30757/trendsetter-posters.htm', 'id': 'gg-mobilelist-trendsetter'}, {'title':'Zen Master','link': '/gallery/id--b30760/zen-master-posters.htm', 'id': 'gg-mobilelist-zenmaster'}]
+- var imgLocation = '//cache1.artprintimages.com/images/holiday/2017/giftguide/'
+mixin pictureElement(title, altTag)
+  picture
+    source(srcset=imgLocation+title+'.jpg' media="(min-width: 600px)")
+    source(srcset=imgLocation+'mobile/'+title+'_1x.jpg 1x, '+imgLocation+'mobile/'+title+'_2x.jpg 2x' media="(min-width: 0px)")
+    img(src=imgLocation+title+'.jpg' alt=altTag)
+
+.holidayGiftGuide
+  .holiday-banner
+    h1 2017 Gift Guide
+  #container.col
+    .theme.theme-featured.track-group#featured-blueprint
+      a(href="/gallery/id--b31126/blueprint-wall-art-posters.htm")
+        //- img(src="//via.placeholder.com/398x375")
+        +pictureElement('gg_spotlight_blueprint2', 'Blueprint Wall Art - Gift Guide Category')
+        img.theme-featured-cta-image(src="//cache1.artprintimages.com/images/holiday/2017/giftguide/sale1_us.svg" alt="$29.99 + free shipping")
+        //- .theme-featured-cta
+        //-   span.theme-featured-cta-price $29.99
+        //-   br
+        //-   span.theme-featured-cta-bonus + free shipping
+        h3.heading-holidayTheme.heading-holidayTheme-featured
+          span.heading-holidayTheme-featured-title Holiday Spotlight
+          span.heading-holidayTheme-featured-subject Blueprint wall art
+        p.theme-featured-callout very limited time
+    .theme-list
+      h2.heading-holidayGuide Gifts For Everyone
+      ul
+        each theme in themes
+          li(class='track-group' id=theme.id)
+            a(href=theme.link)= theme.title
+    .theme.theme-enthusiast.track-group#gg-enthusiast
+      a(href="/gallery/id--b30761/art-enthusiast-posters.htm")
+        //-   img(src="//cache1.artprintimages.com/images/holiday/2017/giftguide/gg_enthusiast.jpg" alt="Art Enthusiast")
+        +pictureElement('gg_enthusiast', 'Art Enthusiast - Gift Guide Category')
+        h3.heading-holidayTheme Art Enthusiast  
+    .theme.theme-forHim.track-group#gg-giftsforhim
+      a(href="/gallery/id--b30763/gifts-for-him-posters.htm")
+        //- img(src="//cache1.artprintimages.com/images/holiday/2017/giftguide/gg_him.jpg")
+        +pictureElement('gg_him', 'Gifts for him - Gift Guide Category')
+        h3.heading-holidayTheme Gifts for him
+    .theme.theme-forHer.track-group#gg-giftsforher
+      a(href="/gallery/id--b30764/gifts-for-her-posters.htm")
+        //- img(src="//cache1.artprintimages.com/images/holiday/2017/giftguide/gg_her.jpg")
+        +pictureElement('gg_her', 'Gifts for her - Gift Guide Category')
+        h3.heading-holidayTheme Gifts for her
+    .copy-block.copy-block-intro
+      h2.heading-holidayGuide MEANINGFUL GIFTS MADE EASY
+      p.
+        A gift of art means something more. We’ve got Christmas gift ideas 
+        that make it easy to connect with your entire list. And personalized 
+        gifts are a snap with hand-picked collections, Photos to Art, 
+        and custom framing. 
+        
+    .theme.promo-module
+      //- img(src=imgLocation+"artmeansmore.png")
+    .theme.theme-photostoart.track-group#gg-photostoart
+      a(href="/photostoart")
+        //- img(src="//cache1.artprintimages.com/images/holiday/2017/giftguide/gg_p2a.jpg")
+        +pictureElement('gg_p2a', 'Photos to Art - Learn more')
+        h3.heading-holidayTheme Photos To Art
+    .theme.theme-nature.track-group#gg-naturelover
+      a(href="/gallery/id--b30759/nature-lover-posters.htm")
+        //- img(src="//cache1.artprintimages.com/images/holiday/2017/giftguide/gg_nature.jpg")
+        +pictureElement('gg_nature', 'Nature Lover - Gift Guide Category')
+        h3.heading-holidayTheme Nature lover
+    .theme.theme-globetrotter.track-group#gg-globetrotter
+      a(href="/gallery/id--b30755/globetrotter-posters.htm")
+        //- img(src="//cache1.artprintimages.com/images/holiday/2017/giftguide/gg_globetrotter.jpg")
+        //- +pictureElement('gg_globetrotter', 'Globetrotter - Gift Guide Category')
+        picture
+          source(srcset=imgLocation+'mobile/gg_globetrotter-reduced_1x.jpg 1x, '+imgLocation+'mobile/gg_globetrotter-reduced_2x.jpg 2x' media="(min-width: 600px)")
+          source(srcset=imgLocation+'mobile/gg_globetrotter-reduced_1x.jpg 1x, '+imgLocation+'mobile/gg_globetrotter-reduced_2x.jpg 2x' media="(min-width: 0px)")
+          img(src=imgLocation+'gg_globetrotter.jpg' alt='Globetrotter - Gift Guide Category')
+        h3.heading-holidayTheme Globetrotter
+    .copy-block.copy-block-outro
+      h2.heading-holidayGuide BE PRESENT IN YOUR GIFTING
+      p.
+        Art creates an unmatched emotional response. It’s a simple gesture, 
+        but the right gift can have a truly profound effect. Our holiday gift 
+        guide has unique gifts for men, for mom, for kids, and just about 
+        anyone on your list. 
+    .theme.theme-animal.track-group#gg-animallover
+      a(href="/gallery/id--b30762/animal-lover-posters.htm")
+        //- img(src="//cache1.artprintimages.com/images/holiday/2017/giftguide/gg_animals.jpg")
+        +pictureElement('gg_animals', 'Animal Lover - Gift Guide Category')
+        h3.heading-holidayTheme Animal lover
+    .theme.theme-trendsetter.track-group#gg-trendsetter
+      a(href="/gallery/id--b30757/trendsetter-posters.htm")
+        //- img(src="//cache1.artprintimages.com/images/holiday/2017/giftguide/gg_trendsetter.jpg")
+        +pictureElement('gg_trendsetter', 'Trendsetter - Gift Guide Category')
+        h3.heading-holidayTheme Trendsetter
+    .theme.theme-gourmet.track-group#gg-gourmet
+      a(href="/gallery/id--b30756/gourmet-posters.htm")
+        //- img(src="//cache1.artprintimages.com/images/holiday/2017/giftguide/gg_gourmet.jpg")
+        +pictureElement('gg_gourmet', 'Gourmet - Gift Guide Category')
+        h3.heading-holidayTheme Gourmet
+    .theme.theme-zen.track-group#gg-zenmaster
+      a(href="/gallery/id--b30760/zen-master-posters.htm")
+        //- img(src="//cache1.artprintimages.com/images/holiday/2017/giftguide/gg_zen.jpg")
+        +pictureElement('gg_zen', 'Zen - Gift Guide Category')
+        h3.heading-holidayTheme Zen Master

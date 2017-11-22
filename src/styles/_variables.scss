@@ -1,0 +1,27 @@
+$color-black: #393333;
+$color-offwhite: #efefef;
+$color-white: #ffffff;
+$color-holidayred: #b11b0d;
+$color-holidaygold: #bd965d;
+
+$font-stack-text: 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif;
+$font-stack-brand: BebasFamily, 'Bebas Neue', BebasNeue, Bebas, $font-stack-text;
+
+$breakpoint: 600px;
+$breakpoint2: 860px;
+$flex-gutter: 10px;
+
+@mixin calcFlexGutter($percent) {
+  width: calc(#{$percent} - #{$flex-gutter/2});
+}
+@mixin flex-treatment {
+  //width: 100%;
+  //min-height:375px;
+  margin: 0 0 $flex-gutter;
+}
+@mixin heading-treatment {
+  font-family: $font-stack-brand;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 1px;
+}
